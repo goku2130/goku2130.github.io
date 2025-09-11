@@ -34,7 +34,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
       - run: npm install
-      - run: npm rebuild lightningcss --platform=linux --arch=x64
       - run: npm run build
         env:
           EXPORT: 1
